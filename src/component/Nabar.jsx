@@ -40,7 +40,9 @@ export default function Nabar() {
                 </div>
      
      {isAuthenticated ? (<button onClick={handleLogout}> LOGOUT</button> ) : ( <button onClick={gotoLogin}>LOGIN</button>)} 
-          
+        
+
+      {/* nothing */}
             </div>
         </div>
      </nav>
