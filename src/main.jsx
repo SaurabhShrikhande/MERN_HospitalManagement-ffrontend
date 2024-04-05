@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-export const context = createContext({isAuthenticated : false })
+export const context = createContext({})
 
 const AppWrapper = () => {
-  const [isAuthenticated , setisAuthenticated] = useState(false);
+  const [isAuthenticated , setisAuthenticated] = useState();
   const [user , setuser] = useState({}); 
 
 

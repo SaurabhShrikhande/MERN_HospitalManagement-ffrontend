@@ -29,10 +29,11 @@ export const Login = () => {
             // .then((res) => {     //not work , dont know why in message same logic work
               console.log(3)
               toast.success(res.data.message);
-              setemail("");
-              setpassword("");
-              setconfirmPassword("");
-             await setisAuthenticated(true);
+              setisAuthenticated(true);
+              
+              // setemail("");
+              // setpassword("");
+              // setconfirmPassword("");
                 navigateto("/");
             // })
             

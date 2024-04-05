@@ -8,7 +8,9 @@ import { toast } from 'react-toastify';
 export default function Nabar() {
     const [show , setshow ] = useState(false);
     const { isAuthenticated, setisAuthenticated } = useContext(context);
-     const navigateto = useNavigate();
+    console.log(isAuthenticated);
+   const [see ,setsee] = useState(isAuthenticated);
+    const navigateto = useNavigate();
     const handleLogout =async () =>{
         //  try{
                 await axios.post("https://mern-hospital-management-backend-1.onrender.com/api/v1/user/patient/logout", {withCredentials : true} )

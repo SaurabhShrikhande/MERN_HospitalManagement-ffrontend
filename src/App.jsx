@@ -18,18 +18,23 @@ function App() {
 
  useEffect (()=> {
      const fetchUser = async() => {
-      try{
-        const res = await axios.get("https://mern-hospital-management-backend-1.onrender.com/api/v1/user/patient/me" ,{withCredentials : true} )
+      try{        
+        console.log("app.jss try block 1")                
+        const responce = await axios.get("https://mern-hospital-management-backend-1.onrender.com/api/v1/user/patient/me" ,{withCredentials : true} )
+                             //on local host its working fine , join the doubt class 3 times in a day , whole night and day gone bt issue not resolve, so removed isAuthenticated dependency from useEffect
+        console.log("app.jss try block 2 ") 
         setisAuthenticated(true);
-        setuser(responce.data.user);
+        setuser(responce.data);
+        console.log("app.jss try block 3") 
       }catch(err){
+        console.log("app.jss try block 4") 
           setisAuthenticated(false);
           setuser({});
       }
      };
      fetchUser();
 
- },[isAuthenticated])
+ } , [])  //isAuthenticated
 
 
   return (
