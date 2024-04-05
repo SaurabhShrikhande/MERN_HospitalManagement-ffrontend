@@ -4,7 +4,7 @@ import {Navigate , useNavigate , Link } from "react-router-dom"
 import axios from 'axios'
 import { toast } from 'react-toastify';
 export const Register = () => {
-const {isAuthenticated} = useContext(context);
+const {isAuthenticated , setisAuthenticated} = useContext(context);
 
 const [firstName , setfirstName] = useState("");
 const [lastName, setlastName] = useState("");
@@ -32,7 +32,7 @@ const handleRegister = async (e) => {
     // .then((res) => {     //not work , dont know why in message same logic work
       console.log(3)
       toast.success(res.data.message);
-     // setisAuthenticated(true);
+      setisAuthenticated(true);
       
       // setemail("");
       // setpassword("");
@@ -52,7 +52,7 @@ const handleRegister = async (e) => {
 
 }
 
-if(isAuthenticated){
+if(isAuthenticated){      //cookie automatically delete, its internal code error
   return <Navigate to={"/"}/>
 }
 

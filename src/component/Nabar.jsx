@@ -43,6 +43,7 @@ export default function Nabar() {
      
      {isAuthenticated ? (<button onClick={handleLogout}> LOGOUT</button> ) : ( <button onClick={gotoLogin}>LOGIN</button>)} 
         
+     {/* cookie automatically delete on page relode, dont know why  */}
 
       {/* nothing */}
             </div>
