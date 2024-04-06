@@ -34,7 +34,7 @@ function App() {
      };
      fetchUser();
 
- } , [])  //isAuthenticated
+ } , [])  //need dependency isAuthenticated  //due to this issue not able to take aapointment
 
 
   return (

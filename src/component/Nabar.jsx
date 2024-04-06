@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { context } from '../main'
 import axios from 'axios';
 import { toast } from 'react-toastify';
-
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Nabar() {
     const [show , setshow ] = useState(false);
@@ -48,6 +48,11 @@ export default function Nabar() {
       {/* nothing */}
             </div>
         </div>
+       
+       <div onClick={() => {setshow(!show)}}>
+       {/* <GiHamburgerMenu/> */}
+         </div>
+     
      </nav>
     </>
   )
