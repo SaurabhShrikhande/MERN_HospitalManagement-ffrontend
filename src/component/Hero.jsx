@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Hero = (props) => {
   return (<>
-    <div>Hero</div>
-    <div>
+    {/* <div>Hero</div> */}
+    <div style={{display:"flex"}}>
         <div>
             <h1>{props.title}</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quam quisquam autem dolore tenetur excepturi repudiandae ad voluptate error neque debitis, perspiciatis voluptatem nostrum earum suscipit voluptatibus voluptatum, obcaecati maxime?
@@ -17,7 +17,7 @@ export const Hero = (props) => {
         <div>
             <img  src={props.imageUrl} alt='hero' />
             <span>
-                <img src="/Vector.png" alt='vector'/>
+                {/* <img style={{ }} src="/Vector.png" alt='vector'/> */}
             </span>
         </div>
     </div>

@@ -6,7 +6,7 @@ import { MessageForm } from '../component/MessageForm'
 
 export const Home = () => {
   return (<>
-    <div>Home</div>
+    {/* <div>Home</div> */}
     <Hero  title={"Welcome to Heltcare Institute"} imageUrl={ "/hero.png"} />
     <Biography  imageUrl = {"/about.png"}/>
     <Department/>

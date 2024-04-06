@@ -39,23 +39,23 @@ export const MessageForm = () => {
  }
 
  return (<>
-    <div>MessageForm</div>
+    {/* <div>MessageForm</div> */}
     <div>
       <h2>Send Us Message</h2>
       <form onSubmit={handleMessage}>
          <div>
-          <div>
-          <input type='text' placeholder='First Name' value={firstName} onChange={(e) => setfirstName(e.target.value)}/>
-          <input type='text' placeholder='Last Name' value={lastName} onChange={(e) => setlastName(e.target.value)}/>
+          <div style={{margin:"15px"}}>
+          <input style={{margin:"15px"}} type='text' placeholder='First Name' value={firstName} onChange={(e) => setfirstName(e.target.value)}/>
+          <input style={{margin:"15px"}} type='text' placeholder='Last Name' value={lastName} onChange={(e) => setlastName(e.target.value)}/>
+          </div >
+          <div style={{margin:"15px"}}>
+          <input style={{margin:"15px"}} type='email' placeholder='Email' value={email} onChange={(e) => setemail(e.target.value)}/>
+          <input style={{margin:"15px"}} type='text' placeholder='Phone' value={phone} onChange={(e) => setphone(e.target.value)}/>
           </div>
-          <div>
-          <input type='email' placeholder='Email' value={email} onChange={(e) => setemail(e.target.value)}/>
-          <input type='text' placeholder='Phone' value={phone} onChange={(e) => setphone(e.target.value)}/>
-          </div>
-          <textarea rows={7} placeholder='Message' value={message} onChange={(e) => setmessage(e.target.value)} ></textarea>
+          <textarea rows={7} cols={40} placeholder='Message' value={message} onChange={(e) => setmessage(e.target.value)} ></textarea>
          </div>
 
-         <div style={{justifyContent: "center" , alignItems: "center" }}>
+         <div  style={{justifyContent: "center" , alignItems: "center", margin:"15px" }}>
              <button type='submit'>Send</button>
          </div>
       </form>

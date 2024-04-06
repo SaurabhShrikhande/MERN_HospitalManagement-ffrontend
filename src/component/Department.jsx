@@ -67,7 +67,7 @@ export const Department = () => {
       };
 
   return ( <>
-    <div>Department</div>
+    {/* <div>Department</div> */}
     <div>
         <h2>Department</h2>
 

@@ -4,7 +4,7 @@ import { Biography } from '../component/Biography'
 
 export const AboutUs = () => {
   return ( <>
-    <div>AboutUs</div>
+    {/* <div>AboutUs</div> */}
     
     <Hero  title="Learn More About Us Heltcare institute" imageUrl="./about.png"/>
      

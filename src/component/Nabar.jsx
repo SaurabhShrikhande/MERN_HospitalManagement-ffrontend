@@ -31,17 +31,17 @@ export default function Nabar() {
       navigateto("/login")
     }
    return ( <>
-    <div>Nabar</div>
+    {/* <div>Nabar</div> */}
      <nav>
-        <div>
-            <div>
+        <div style={{background:"black"}}>
+            <div style={{display:"flex" , justifyContent:"space-around" ,alignItems:"center" , color:"white" }}>
                 <div style={{display:"flex" , gap:"50px"}}>
-                    <Link to={"/"} >HOME </Link>
-                    <Link to={"/appointment"} > APPOINTMENT</Link>
-                    <Link to={"/about"} > ABOUT US</Link>
+                    <Link style={{color:"white" }} to={"/"} >HOME </Link>
+                    <Link style={{color:"white" }} to={"/appointment"} > APPOINTMENT</Link>
+                    <Link style={{color:"white" }} to={"/about"} > ABOUT US</Link>
                 </div>
      
-     {isAuthenticated ? (<button onClick={handleLogout}> LOGOUT</button> ) : ( <button onClick={gotoLogin}>LOGIN</button>)} 
+     {isAuthenticated ? (<button style={{background:"black", color:"white"}} onClick={handleLogout}> LOGOUT</button> ) : ( <button style={{background:"black", color:"white"}}  onClick={gotoLogin}>LOGIN</button>)} 
         
      {/* cookie automatically delete on page relode, dont know why  */}
 

@@ -4,8 +4,8 @@ import { AppointmentForm } from '../component/AppointmentForm'
 
 export const Appointment = () => {
   return (<>
-    <div>Appointment</div>
-    <Hero title="Shedule your meeting || HealtCare Institute" imageUrl= "dignin.png"/>
+    {/* <div>Appointment</div> */}
+    <Hero title="Shedule your meeting || HealtCare Institute" imageUrl= "./signin.png"/>
        
        <AppointmentForm/>
 
