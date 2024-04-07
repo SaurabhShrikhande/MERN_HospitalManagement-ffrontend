@@ -11,15 +11,17 @@ export default function Nabar() {
     console.log(isAuthenticated);
    const [see ,setsee] = useState(isAuthenticated);
     const navigateto = useNavigate();
-    const handleLogout =async () =>{
+    const handleLogout = async () => {
         //  try{
                 await axios.post("https://mern-hospital-management-backend-1.onrender.com/api/v1/user/patient/logout", {withCredentials : true} )
-           .then(res => {
+           .then((res) => {
+               setisAuthenticated(false)
               toast.success(res.data.message)
-              setisAuthenticated(false)
+             
            })
            .catch((err) => {
-            toast.error(err.responce.dada.message)
+
+            toast.error(err.responce.data.message)
            })
         //  }
         //   catch(err) {
